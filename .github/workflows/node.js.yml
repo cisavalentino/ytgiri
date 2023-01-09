@@ -21,7 +21,7 @@ jobs:
         node-version: 16
         cache: 'npm'
         cache-dependency-path: frontend/*.json
-    - run: npm ci
+    - run: npm i
     - run: npm test
     
     - name: Build & push Docker image
