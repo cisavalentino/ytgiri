@@ -19,8 +19,9 @@ jobs:
           cmd: install # will run `yarn install` command
           dir: 'frontend'
 
-      - run: cd ./frontend
       - run: yarn
+        working-directory: frontend
       - run: yarn test
+        working-directory: frontend
           
           
