@@ -2,10 +2,10 @@ FROM node:16-alpine
 
 ENV VUE_APP_API_URL=http://localhost:8080
 
-RUN mkdir /app
+WORKDIR /app
 
-COPY . /app
+COPY . .
 
-RUN yarn --cwd /app install
+RUN yarn install
 
-CMD ["yarn", "--cwd" ,"/app", "serve"]
+CMD ["yarn","serve"]
