@@ -19,9 +19,10 @@ jobs:
           cmd: install # will run `yarn install` command
           dir: 'frontend'
 
-      - run: yarn
-        working-directory: frontend
-      - run: yarn test
-        working-directory: frontend
+      - name: Run build in sub-folder
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
+          dir: 'frontend' # will run `yarn build` in `frontend` sub folder
           
           
