@@ -13,6 +13,10 @@ jobs:
           go-version: '1.16.x'
       - name: Install dependencies
         run: go get .
+        
+      - name: install init
+        run: go init
+      
       - name: Build
         run: go build -v ./...
       - name: Test with the Go CLI
