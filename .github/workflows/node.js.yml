@@ -17,11 +17,12 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
+          dir: 'frontend'
 
       - name: Run test in sub-folder
         uses: borales/actions-yarn@v4
         with:
-          cmd: run test
+          cmd: test
           dir: 'frontend' # will run `yarn test` in `frontend` sub folder
           
           
