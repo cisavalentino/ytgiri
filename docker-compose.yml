@@ -4,10 +4,6 @@ services:
         image: postgres
         ports:
             - 5432:5432
-        environment:
-            - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=rahasia
-            - POSTGRES_DB=belajar
         volumes:
             - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
     todo-backend:
