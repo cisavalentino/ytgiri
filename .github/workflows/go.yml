@@ -27,6 +27,7 @@ jobs:
         name: Build & push Docker image
         with:
           image: cisavalentino/todo-backend
+          working-directory: frontend
           tags: v1, latest
           registry: docker.io
           dockerfile: Dockerfile
