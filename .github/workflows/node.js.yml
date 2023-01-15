@@ -28,7 +28,7 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v5
         name: Build & push Docker image
         with:
-          working-directory: frontend
+          directory: ./frontend
           image: cisavalentino/todo-frontend
           tags: v1, latest
           registry: docker.io
